@@ -59,7 +59,7 @@ public class Client extends javax.swing.JFrame {
         jPanelBackground = new javax.swing.JPanel() {
             public void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon img = new ImageIcon("src\\images\\background-wallpaper.png");
+                ImageIcon img = new ImageIcon("src\\images\\photo.jpg");
                 g.drawImage(img.getImage(), 0, 0, jPanelBackground);
             }
         };
