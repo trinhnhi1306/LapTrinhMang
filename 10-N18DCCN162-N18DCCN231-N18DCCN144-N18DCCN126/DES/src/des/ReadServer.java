@@ -33,20 +33,20 @@ public class ReadServer extends Thread {
             dout = new DataOutputStream(socket.getOutputStream());
         
             while (true) {       
-                
+                System.out.println("Đang đọc key từ client...");
                 String key = din.readUTF();
                 System.out.println("Key: " + key);
                 int len = din.readInt();
                 byte[] data = new byte[len];
-                
+                System.out.println("Đang đọc bản mã từ client...");
                 if (len > 0) {
                     din.readFully(data);
                 }
-                
+                System.out.println("Đang giải mã...");
                 String ketQua = DES.giaiMaDES(key, data);                
                 System.out.println("Bản rõ: " + ketQua);
                 
-                
+                System.out.println("Gửi kết quả đến client...");
                 dout.writeUTF(ketQua);
                 System.out.println("Đã gửi kết quả");                
             }
@@ -54,7 +54,6 @@ public class ReadServer extends Thread {
             System.out.println(socket + " đã ngắt kết nối!");
             try {
                 din.close();
-                dout.close();
                 socket.close();
                 //e.printStackTrace();
             } catch (IOException ex) {

@@ -1,0 +1,6 @@
+Đề tài 10: Xây chương trình giao diện socket client – server bằng java với giao thức TCP mã hóa và giãi mã văn bản với thuật toán mã hóa DES
+Nhóm 10:
+Đậu Trường Quân – N18DCCN162
+Nguyễn Ngọc Phương Trinh – N18DCCN231
+Nguyễn Ngọc Lâm Như – N18DCCN144
+Hà Thị Mơ – N18DCCN126
